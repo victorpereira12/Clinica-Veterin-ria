@@ -24,18 +24,25 @@ header {
   font-size: 24px;
   font-weight: 900;
 }
+.navItem-mobile {
+  display: none;
+}
 .navItem {
   font-size: 20px;
   gap: 50px;
   display: flex;
   font-weight: 600;
 }
-.navItem li {
+.navItem a {
+  color: #fafafa;
   cursor: pointer;
   list-style: none;
 }
-.navItem li:hover {
+.navItem a:hover {
   border-bottom: 2px solid #fafafa;
+}
+.menuIcon {
+  display: none;
 }
 
 /*HOME*/
@@ -260,16 +267,21 @@ header {
   color: #263238;
   margin-bottom: 24px;
 }
+.footerInfos2 li {
+  margin-bottom: 5px;
+}
+.footerInfos2 li:hover {
+  border-bottom: 1px solid #091216;
+  width: 50px;
+}
 .footerInfos2 a {
   color: black;
   margin-top: -8px;
   font-size: 16px;
   margin-bottom: 15px;
+  list-style: none;
 }
-.footerInfos2 a:hover {
-  border-bottom: 1px solid #263238;
-  width: 50px;
-}
+
 .footerInfos3 ul li {
   margin-bottom: 15px;
   list-style: none;
@@ -289,4 +301,252 @@ header {
 }
 .footer a:hover {
   border-bottom: 1px solid #fafafa;
+}
+@media (max-width: 900px) {
+  header .navBar {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navBar {
+    padding: 0 20px;
+  }
+  .menuIcon {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  .navItem {
+    display: none;
+  }
+  .navItem-mobile {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ff9a6c;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin-top: -4px;
+  }
+  .navItem-mobile.open {
+    display: flex;
+  }
+
+  .navItem-mobile li {
+    color: #fafafa;
+    margin: 15px;
+  }
+  /*HOME*/
+  #home {
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .bgHome {
+    z-index: 99;
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+  }
+  .homeInfos {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 170px;
+  }
+  .homeTitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .homeText {
+    font-size: 14px;
+    text-align: center;
+  }
+  .homeButtons {
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .homeButtons button {
+    width: 205px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .homeButtons p {
+    font-size: 12px;
+  }
+  .homeButtons p:hover {
+    transition: 0.3s;
+    letter-spacing: 0.3px;
+  }
+
+  .bgHome-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+  }
+  /*INFOS*/
+
+  .infosHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+  }
+  .infos1 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .infosTitle {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .infosText {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .infosList {
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 14px;
+    list-style-position: inside;
+  }
+  .infosList li {
+    margin-top: 5px;
+  }
+
+  .bgInfos-header {
+    width: 250px;
+    height: 220px;
+    margin: 0;
+  }
+  /*PHARMACY*/
+  .infosPharmacy {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .infosText2 {
+    text-align: justify;
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  .bgPharmacy {
+    width: 300px;
+    height: 250px;
+  }
+  /*QUESTION*/
+  .question {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .bgQuestion {
+    width: 250px;
+    margin: auto;
+  }
+
+  .questionForm {
+    width: 80%;
+    margin: auto;
+    font-size: 14px;
+  }
+  .questionResposta {
+    width: 80%;
+    font-size: 14px;
+  }
+  /*FOoter*/
+
+  .footerInfos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: baseline;
+    background-color: #ff9b6c56;
+    height: 70vh;
+    width: 100%;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .footerInfos1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+  }
+  .footerLogo {
+    font-size: 20px;
+    font-weight: 1000;
+    color: #ff725e;
+  }
+  .footerText {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .footerInfos2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 10px;
+  }
+  .footerInfos2 {
+    font-size: 14px;
+  }
+
+  .footerTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #263238;
+    margin-bottom: 10px;
+  }
+  .footerInfos2 a {
+    display: flex;
+    flex-direction: column-reverse;
+    list-style: none;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .footerInfos3 ul li {
+    margin-bottom: 15px;
+    list-style: none;
+    font-size: 14px;
+  }
+  .footer {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #263238;
+    color: #fafafa;
+    gap: 5px;
+  }
 }

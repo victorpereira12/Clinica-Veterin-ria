@@ -18,12 +18,24 @@
       <nav class="navBar">
         <p class="logo">PetLife</p>
         <ul class="navItem">
-          <li>Início</li>
-          <li>Clínica</li>
-          <li>Farmácia</li>
-          <li>Dúvidas</li>
+          <a href="#home"><li>Início</li></a>
+          <a href="#infos"> <li>Clínica</li></a>
+          <a href="#farmacia"> <li>Farmácia</li></a>
+          <a href="#question"> <li>Dúvidas</li></a>
         </ul>
+        <img
+          onclick="openMenu()"
+          class="menuIcon"
+          src="./assets/menuIcon.png"
+          alt=""
+        />
       </nav>
+      <ul class="navItem-mobile">
+        <a href="#home"><li>Início</li></a>
+        <a href="#infos"> <li>Clínica</li></a>
+        <a href="#farmacia"> <li>Farmácia</li></a>
+        <a href="#question"> <li>Dúvidas</li></a>
+      </ul>
     </header>
     <main>
       <section id="home">
@@ -45,8 +57,9 @@
         </div>
         <img class="bgHome-bottom" src="./assets/bgHome-bottom.png" alt="" />
       </section>
-      <section id="Infos">
-        <div class="infosHeader">
+
+      <section>
+        <div id="infos" class="infosHeader">
           <div class="infos1">
             <p class="infosTitle">Cuidado Veterinário de Qualidade</p>
             <p class="infosText">
@@ -73,7 +86,8 @@
           </div>
           <img class="bgInfos-header" src="./assets/bgInfos.png" alt="" />
         </div>
-        <div class="infosPharmacy">
+
+        <div id="farmacia" class="infosPharmacy">
           <p class="infosTitle">Venha conferir o nosso petshop e farmácia</p>
           <img class="bgPharmacy" src="./assets/bgPharmacy.png" alt="" />
           <p class="infosText2">
@@ -90,7 +104,8 @@
             veterinária.
           </p>
         </div>
-        <div class="question">
+
+        <div id="question" class="question">
           <img class="bgQuestion" src="./assets/bgQuestion.png" alt="" />
           <div class="questions">
             <p class="infosTitle">Ficou algum dúvida?</p>
@@ -166,7 +181,8 @@
         </div>
       </section>
     </main>
-    <footer>
+
+    <footer id="#footer">
       <div class="footerInfos">
         <div class="footerInfos1">
           <p class="footerLogo">PetLife</p>
@@ -177,10 +193,12 @@
         </div>
         <div class="footerInfos2">
           <p class="footerTitle">Links Rápidos</p>
-          <a href="">Início</a>
-          <a href="">Clínica</a>
-          <a href="">Farmácia</a>
-          <a href="">Dúvidas</a>
+          <ul>
+            <a href="#home"><li>Início</li></a>
+            <a href="#infos"> <li>Clínica</li></a>
+            <a href="#farmacia"> <li>Farmácia</li></a>
+            <a href="#question"> <li>Dúvidas</li></a>
+          </ul>
         </div>
         <div class="footerInfos3">
           <p class="footerTitle">Encontre-nos</p>
